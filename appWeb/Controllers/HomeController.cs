@@ -10,7 +10,7 @@ namespace appWeb.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Index(String id)
+        public ActionResult index(String id)
         {
             if (String.IsNullOrWhiteSpace(id))
                 return View("Error");
@@ -22,14 +22,28 @@ namespace appWeb.Controllers
             }
         }
 
-        public String ChercherClient(string id)
+        public ActionResult chercherClient(string id)
         {
             Clients listeClient = new Clients();
             Client client = listeClient.LesClients().FirstOrDefault(c => c.Nom == id);
             if (client != null)
-                return client.Nom;
+            {
+                ViewData["nom"] = client.Nom;
+                ViewData["age"] = client.Age;
+                return View("Trouve");
+            }
             else
-                return "pas trouvé !";
+                return View("Introuvable") ;
+        }
+
+        public ActionResult lesClients()
+        {
+            Clients listeClient = new Clients();
+            ViewData["Clients"] =  listeClient.LesClients();
+            if (listeClient != null)
+                return View("AffichageClients");
+            else
+                return View("Introuvable");
         }
     }
 }

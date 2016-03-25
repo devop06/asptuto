@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AffichageClients</title>
+</head>
+<body>
+    <div> 
+        <table>
+            <caption>Liste client</caption>
+            <tr>
+                <th>Nom</th>
+                <th>Age</th>
+            </tr>
+            @foreach (appWeb.Models.Client c in @ViewData["Clients"] as List<appWeb.Models.Client>)
+            {
+                <tr>
+                    <td>@c.Nom</td>
+                    <td>@c.Age</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

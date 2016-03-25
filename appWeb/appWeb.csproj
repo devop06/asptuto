@@ -121,6 +121,9 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Home\Trouve.cshtml" />
+    <Content Include="Views\Home\Introuvable.cshtml" />
+    <Content Include="Views\Home\AffichageClients.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

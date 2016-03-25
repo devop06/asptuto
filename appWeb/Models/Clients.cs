@@ -16,6 +16,14 @@ namespace appWeb.Models
                 new Client {
                     Nom = "Clément",
                     Age = 15
+                },
+               new Client {
+                    Nom = "Meggie",
+                    Age = 21
+                },
+                new Client {
+                    Nom = "Enzo",
+                    Age = 1
                 }
             };
         }
