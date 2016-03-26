@@ -48,7 +48,7 @@ namespace appWeb.Controllers
 
         public ActionResult Introuvable()
         {
-            return View(); // retourne la vue possédant le même nom que la méthode du contrôleur solicité
+            return View(); // retourne la vue possédant le même nom que la méthode du contrôleur
         }
     }
 }

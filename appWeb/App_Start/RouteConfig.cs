@@ -18,6 +18,12 @@ namespace appWeb
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Calcul",
+                url: "{controller}/{action}/{valeur1}/{valeur2}",
+                defaults: new { controller = "Calculateur", action = "Ajouter", valeur1=0, valeur2=0  }
+            );
         }
     }
 }
