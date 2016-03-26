@@ -45,5 +45,10 @@ namespace appWeb.Controllers
             else
                 return View("Introuvable");
         }
+
+        public ActionResult Introuvable()
+        {
+            return View(); // retourne la vue possédant le même nom que la méthode du contrôleur solicité
+        }
     }
 }
