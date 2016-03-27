@@ -20,5 +20,12 @@ namespace appWeb.Controllers
             ViewData["res"] = res;
             return View("Index");
         }
+
+        public ActionResult AjouterInfini(string valeur)
+        {
+            ViewData["res"] = valeur;
+            return View("Index");
+        }
+
     }
 }
