@@ -107,6 +107,7 @@
     <Compile Include="Controllers\CalculateurController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="fonctions\MathHelper.cs" />
+    <Compile Include="fonctions\NombreRandom.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
